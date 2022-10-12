@@ -4,7 +4,7 @@ import axios from "axios";
 import makeAnimated from "react-select/animated";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import './style.css';
 import useGetAllUsers from "../../hooks/useGetAllUsers";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 
@@ -75,7 +75,8 @@ const ScheduleInterview = () => {
   };
 
   return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6">
+    <div className="container schedule" id="home">
+      <main className="max-w-3xl mx-auto px-4 sm:px-6">
       <div className="pt-32 pb-12">
         <div className="flex flex-col">
           <h2 className="text-xl text-center font-medium mb-4">
@@ -99,45 +100,46 @@ const ScheduleInterview = () => {
                 }}
               />
 
-              <label className="mt-4 w-full">Date : </label>
+              <label className="date">Date : 
               <input
                 type="date"
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
                 required
                 className="rounded-md"
-              />
+              /></label>
 
-              <label className="mt-4">Start Time : </label>
+              <label className="start_time">Start Time : 
               <input
                 type="time"
                 value={startTime}
                 onChange={(e) => setStartTime(e.target.value)}
                 required
                 className="rounded-md"
-              />
+              /></label>
 
-              <label className="mt-4">End Time : </label>
+              <label className="end_time">End Time : 
               <input
                 type="time"
                 value={endTime}
                 onChange={(e) => setEndTime(e.target.value)}
                 required
                 className="rounded-md"
-              />
+              /></label>
 
-              <label className="mt-4">Upload Resume : </label>
+              <label className="resume">Upload Resume : 
               <input
                 name="resume"
                 onChange={(e) => setResume(e.target.files[0])}
                 id="resume"
                 type="file"
                 accept="application/pdf"
-              />
+                className="rounded-md"
+              /></label>
 
               <button
                 type="submit"
-                className="btn mx-auto mt-6 bg-blue-500 text-white"
+                className="btn submit_btn"
                 disabled={isFormSubmitting}
               >
                 {isFormSubmitting ? "Submitting..." : "Submit"}
@@ -147,6 +149,8 @@ const ScheduleInterview = () => {
         </div>
       </div>
     </main>
+    </div>
+    
   );
 };
 

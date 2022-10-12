@@ -3,16 +3,8 @@ const constants = require("./constant");
 
 const emailSender = async ({ email, subject, body }) => {
   const transporter = nodemailer.createTransport({
-    // port: 587,
-    // secure: false,
-    // requireTLS: true,
-    // host: "smtp.gmail.com",
     service: "gmail",
     auth: {
-      type: "OAuth2",
-      clientId: MAIL_CLIENT_ID,
-      clientSecret: MAIL_CLIENT_SECRET,
-      refreshToken: MAIL_REFRESH_TOKEN,
       user: constants.auth.EMAIL,
       pass: constants.auth.PASSWORD,
     },

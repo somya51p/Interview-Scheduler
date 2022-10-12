@@ -5,7 +5,7 @@ import Select from "react-select";
 import { useState } from "react";
 import moment from "moment";
 import axios from "axios";
-
+import './style.css';
 import useGetAllUsers from "../../hooks/useGetAllUsers";
 import useGetInterviewDetails from "../../hooks/useGetInterviewDetails";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
@@ -80,7 +80,8 @@ const EditInterview = () => {
   };
 
   return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6">
+    <div className="container" id="home">
+      <main className="max-w-3xl mx-auto px-4 sm:px-6">
       <div className="pt-32 pb-12">
         {getInterviewStatus === "loading" && (
           <div>Getting interview details...</div>
@@ -148,7 +149,7 @@ const EditInterview = () => {
                   }}
                 />
 
-                <label className="mt-4 w-full">Date : </label>
+                <label className="date">Date : </label>
                 <input
                   type="date"
                   value={date}
@@ -157,7 +158,7 @@ const EditInterview = () => {
                   className="rounded-md"
                 />
 
-                <label className="mt-4">Start Time : </label>
+                <label className="start_time">Start Time : </label>
                 <input
                   type="time"
                   value={startTime}
@@ -166,7 +167,7 @@ const EditInterview = () => {
                   className="rounded-md"
                 />
 
-                <label className="mt-4">End Time : </label>
+                <label className="end_time">End Time : </label>
                 <input
                   type="time"
                   value={endTime}
@@ -177,7 +178,7 @@ const EditInterview = () => {
 
                 <button
                   type="submit"
-                  className="btn mx-auto mt-6 bg-blue-500 text-white"
+                  className="edit_btn"
                   disabled={isFormSubmitting}
                 >
                   {isFormSubmitting ? "Submitting..." : "Submit"}
@@ -188,6 +189,8 @@ const EditInterview = () => {
         </div>
       </div>
     </main>
+    </div>
+    
   );
 };
 

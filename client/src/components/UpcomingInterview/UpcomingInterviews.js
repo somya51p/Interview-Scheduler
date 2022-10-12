@@ -1,6 +1,6 @@
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
-
+import './style.css';
 import useGetUpcomingInterviews from "../../hooks/useGetUpcomingInterviews";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 
@@ -9,7 +9,8 @@ const UpcomingInterviews = () => {
   const { status, data, error } = useGetUpcomingInterviews();
 
   return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6">
+    <div className="container schedule" id="home">
+      <main className="max-w-3xl mx-auto px-4 sm:px-6">
       <div className="pt-32 pb-12">
         {status === "loading" && <div>Loading...</div>}
         {status === "error" && <div>Error fetching upcoming interviews</div>}
@@ -34,7 +35,7 @@ const UpcomingInterviews = () => {
                 </div>
                 <Link
                   to={`/edit/${_id}`}
-                  className="btn-sm w-fix mx-auto bg-blue-400 text-white"
+                  className="edit_btn"
                 >
                   Edit
                 </Link>
@@ -44,6 +45,8 @@ const UpcomingInterviews = () => {
         )}
       </div>
     </main>
+    </div>
+    
   );
 };
 
