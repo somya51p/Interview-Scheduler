@@ -7,7 +7,7 @@ export default function useGetAllUsers() {
   return useQuery(
     "users",
     () => {
-      return axios.get(`/api/users/`).then((res) => res.data);
+      return axios.get(`https://interview-scheduler-510.herokuapp.com/api/users/`).then((res) => res.data);
     },
     {
       refetchOnWindowFocus: false,

@@ -3,6 +3,6 @@ import axios from "axios";
 
 export default function useGetUpcomingInterviews() {
   return useQuery("interviews", () => {
-    return axios.get(`/api/interviews/upcoming`).then((res) => res.data);
+    return axios.get(`https://interview-scheduler-510.herokuapp.com/api/interviews/upcoming`).then((res) => res.data);
   });
 }

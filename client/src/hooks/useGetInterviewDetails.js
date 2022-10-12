@@ -4,7 +4,7 @@ import axios from "axios";
 const twentyFourHoursInMs = 1000 * 60 * 60 * 24;
 
 export const fetchInterview = ({ queryKey }) => {
-  return axios.get(`/api/interviews/${queryKey[1]}`).then((res) => res.data);
+  return axios.get(`https://interview-scheduler-510.herokuapp.com/api/interviews/${queryKey[1]}`).then((res) => res.data);
 };
 
 export default function useGetInterviewDetails(interviewId) {
