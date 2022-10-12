@@ -1,0 +1,136 @@
+footer {
+    width: 100%;
+    background: url("./footer-bg.jpg") no-repeat center/cover;
+    .container {
+      padding: 100px 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      h2 {
+        color: rgba(0, 128, 128, 0.87);
+        margin-bottom: 22px;
+        font-weight: 400;
+        font-size: 21px;
+      }
+      .footerCard {
+        width: 100%;
+        max-width: 23%;
+        &.cardone {
+          display: flex;
+          flex-direction: column;
+          a {
+            text-decoration: none;
+            color: rgba(0, 128, 128, 0.87);
+            font-weight: 200;
+            margin-bottom: 10px;
+            transition: color 600ms;
+            &:hover {
+              color: rgba(0, 128, 128, 0.87);
+            }
+          }
+        }
+        &.cardtwo {
+          max-width: 50%;
+          p {
+            color: rgba(0, 128, 128, 0.87);
+            font-size: 15px;
+            font-weight: 300;
+          }
+          .email {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            input {
+              padding: 14px;
+              border: none;
+              outline: none;
+              border-radius: 50px;
+              width: 60%;
+              margin-right: 24px;
+            }
+            .btn {
+              border-radius: 50px;
+              background: rgba(0, 128, 128, 0.87);
+              border: none;
+              color: rgba(0, 128, 128, 0.87);
+              font-weight: 400;
+              &:hover {
+                background: rgba(0, 128, 128, 0.87);
+              }
+              i {
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+        &.cardthree {
+          .imgWrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            img {
+              margin-bottom: 8px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .wrapper {
+        color: rgba(0, 128, 128, 0.87);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 80px 0;
+        .copyright {
+          p {
+            color: rgba(0, 128, 128, 0.87);
+            font-size: 15px;
+            font-weight: 300;
+            i {
+              color: rgba(0, 128, 128, 0.87);
+            }
+            a {
+              text-decoration: none;
+              color: rgba(0, 128, 128, 0.87);
+            }
+          }
+        }
+        .icons {
+          display: flex;
+          .box {
+            background: #111;
+            color: rgba(0, 128, 128, 0.87);
+            width: 40px;
+            height: 40px;
+            margin: 0 5px;
+            display: flex;
+            cursor: pointer;
+            &:hover {
+              background: rgba(0, 128, 128, 0.87);
+            }
+            i {
+              margin: auto;
+            }
+          }
+        }
+      }
+      .social_handles {
+        margin-left: 1.5em;
+        margin-top: 2em;
+      }
+      .icon {
+        margin: 1em;
+        color: white;
+        padding: 1em;
+      }
+      
+      .btn-icon {
+        border: none;
+        height: 3em !important;
+        width: 3em !important;
+        border-radius: 2em;
+      }
+      .btn-icon:hover {
+        background-color: maroon;
+      }
+    }

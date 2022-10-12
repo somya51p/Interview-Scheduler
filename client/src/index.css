@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sacramento&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  word-break: break-word;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Acme", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.w-fix {
+  width: 200px;
+}
+
+:focus,
+button:focus,
+.btn:focus,
+.btn-sm:focus,
+.form-input:focus,
+.form-textarea:focus,
+.form-multiselect:focus,
+.form-select:focus,
+.form-checkbox:focus,
+.form-radio:focus {
+  outline: 2px solid rgba(#0070f4, 0.5);
+}
