@@ -31,6 +31,11 @@ initializeDBConnection();
 // importData();
 
 // Routes
+app.get("/ping", (req, res) => {
+  console.log("pong");
+  res.json({message: "pong"})
+})
+
 app.use("/api/interviews", interviewRouter);
 app.use("/api/users", userRouter);
 

@@ -5,10 +5,16 @@
     height: 115vh;
     background-color: #f5f5f5;
 }
+.card {
+  height: 175px;
+  margin: 10px;
+  padding: 5px;
+}
 .edit_btn {
-    padding:20px 30px;
+    padding:10px 20px;
     background: rgba(0, 128, 128, 0.87);
     line-height: 25px;
+    text-align: center;
     font-size: 20px;
     font-weight: lighter;
     text-transform: capitalize;

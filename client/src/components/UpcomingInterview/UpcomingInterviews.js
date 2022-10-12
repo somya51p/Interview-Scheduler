@@ -20,7 +20,7 @@ const UpcomingInterviews = () => {
               Upcoming Interviews
             </h2>
             {data.interviews.map(({ startTime, endTime, _id }) => (
-              <div className="flex flex-col p-4 border-4 rounded-md m-4">
+              <div className="card">
                 <div>Id: {_id} </div>
                 <div>
                   Date: <Moment format="DD-MM-YYYY">{endTime}</Moment>

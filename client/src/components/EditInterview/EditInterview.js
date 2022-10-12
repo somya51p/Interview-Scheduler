@@ -94,14 +94,14 @@ const EditInterview = () => {
             <h2 className="text-center text-xl font-bold mb-4">
               Interview Details
             </h2>
-            <div className="flex flex-col border-2 rounded-md p-4">
+            <div className="date">
               <div>
                 Date:
                 <Moment format="DD-MM-YYYY">
                   {getInterviewData.interview.endTime}
                 </Moment>
               </div>
-              <div className="grid grid-cols-2 mb-2">
+              <div className="start_time">
                 <div>
                   Start Time:
                   <Moment format="hh:mm A">
@@ -115,7 +115,7 @@ const EditInterview = () => {
                   </Moment>
                 </div>
               </div>
-              <ul className="list-disc px-2">
+              <ul className="participants">
                 Participants:
                 {getInterviewData.interview.usersInvited.map((user) => {
                   return <li key={user.email}>{user.email}</li>;

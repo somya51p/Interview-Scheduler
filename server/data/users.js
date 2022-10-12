@@ -15,6 +15,10 @@ const users = [
     name: "Abhishek Dubey",
     email: "2019005@iiitdmj.ac.in",
   },
+  {
+    name: "Rishabh Raj",
+    email: "2019322@iiitdmj.ac.in",
+  },
 ];
 
 module.exports = users;
